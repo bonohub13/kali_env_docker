@@ -1,6 +1,7 @@
 DOCKER := docker
 DOCKER_IMG_TAG := kali_env
 DOCKER_TEST_CONTAINER_NAME := kali_env-test
+DOCKER_CONTAINER_NAME := kali_env
 XHOST := xhost
 SHELL := /usr/bin/bash
 
@@ -16,4 +17,3 @@ test:
 		-v ${XAUTH}:/root/.Xauthority \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
 		${DOCKER_IMG_TAG}
-	${XHOST} -local:root
